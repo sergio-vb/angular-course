@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuccessAlertComponent implements OnInit {
 
-  constructor() { }
+  username:string;
+
+  constructor() {}
 
   ngOnInit() {
+  }
+
+  resetUsername(){
+    console.log("Resetting string.");
+    this.username = "";
   }
 
 }

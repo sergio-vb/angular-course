@@ -1,3 +1,14 @@
 <h1>
-  Operation success!!
+  Mission success!
 </h1>
+<h3>Exercise instructions:</h3>
+<ol>
+  <li>Input field which updates username (two-way)</li>
+  <li>Output the name below (string interpolation)</li>
+  <li>Button only enable if string not empty</li>
+  <li>Button click reset user to empty</li>
+</ol>
+
+<input type="text" [(ngModel)]="username" />
+<p>{{username}}</p>
+<button [disabled]="username === ''" (click)="resetUsername()">Reset string</button>
