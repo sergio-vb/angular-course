@@ -1,7 +1,7 @@
 <h1>
   Mission success!
 </h1>
-<h3>Exercise instructions:</h3>
+<h3>Exercise 01 - Data Binding:</h3>
 <ol>
   <li>Input field which updates username (two-way)</li>
   <li>Output the name below (string interpolation)</li>
@@ -13,12 +13,22 @@
 <p>{{username}}</p>
 <button [disabled]="username === ''" (click)="resetUsername()">Reset string</button>
 
-<h3>Directives Exercise:</h3>
-<p>1. Add a button which says display details.
-2. Add a paragraph with any content of your choice.
-3. Toggle displaying that paragraph with the button of the first step.
-4. Log all button clicks in  an array and output that array below the paragraph.
-5. Starting on the 5th item, give items a blue background with ngStyle and white text color with ngClass.</p>
+<h3>Exercise 02 - Directives:</h3>
+<ol>
+  <li>Add a button which says display details.</li>
+  <li>Add a paragraph with any content of your choice.</li>
+  <li>Toggle displaying that paragraph with the button of the first step.</li>
+  <li>Log all button clicks in  an array and output that array below the paragraph.</li>
+  <li>Starting on the 5th item, give items a blue background with ngStyle and white text color with ngClass.</li>
+</ol>
 
-<button>Display Details</button>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat molestiae veritatis architecto deleniti debitis ipsam nulla, quaerat voluptates nobis et, autem reprehenderit dolorum. Quas, voluptates aliquid fuga facere consequatur magni.</p>
+<button (click)="onButtonEx2Click()">Toggle Details</button>
+<p *ngIf="paragraphVisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat molestiae veritatis architecto deleniti debitis ipsam nulla, quaerat voluptates nobis et, autem reprehenderit dolorum. Quas, voluptates aliquid fuga facere consequatur magni.</p>
+
+<ul>
+  <li 
+    *ngFor="let counter of ex2ArrayCounter" 
+    [ngClass]="{whiteText: counter >= 5 }" 
+    [ngStyle]="{backgroundColor: counter >= 5 ? '#00f' : 'inherit'}"
+  >{{counter}}</li>
+</ul>

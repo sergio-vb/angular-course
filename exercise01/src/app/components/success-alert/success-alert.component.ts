@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class SuccessAlertComponent implements OnInit {
 
   username:string;
+  paragraphVisible:boolean = true;
+  ex2Counter:number = 0;
+  ex2ArrayCounter:number[] = [];
 
   constructor() {}
 
@@ -17,6 +20,12 @@ export class SuccessAlertComponent implements OnInit {
   resetUsername(){
     console.log("Resetting string.");
     this.username = "";
+  }
+
+  onButtonEx2Click(){
+    this.paragraphVisible = !this.paragraphVisible;
+    this.ex2Counter++;
+    this.ex2ArrayCounter.push(this.ex2Counter);
   }
 
 }
