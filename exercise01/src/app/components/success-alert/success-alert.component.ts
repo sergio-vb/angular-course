@@ -10,7 +10,7 @@ export class SuccessAlertComponent implements OnInit {
   username:string;
   paragraphVisible:boolean = true;
   ex2Counter:number = 0;
-  ex2ArrayCounter:number[] = [];
+  ex2ArrayCounter:Date[] = [];
 
   constructor() {}
 
@@ -25,7 +25,8 @@ export class SuccessAlertComponent implements OnInit {
   onButtonEx2Click(){
     this.paragraphVisible = !this.paragraphVisible;
     this.ex2Counter++;
-    this.ex2ArrayCounter.push(this.ex2Counter);
+    //this.ex2ArrayCounter.push(this.ex2Counter);
+    this.ex2ArrayCounter.push(new Date());
   }
 
 }

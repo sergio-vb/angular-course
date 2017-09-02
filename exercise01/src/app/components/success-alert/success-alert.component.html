@@ -27,8 +27,8 @@
 
 <ul>
   <li 
-    *ngFor="let counter of ex2ArrayCounter" 
-    [ngClass]="{whiteText: counter >= 5 }" 
-    [ngStyle]="{backgroundColor: counter >= 5 ? '#00f' : 'inherit'}"
+    *ngFor="let counter of ex2ArrayCounter; let i = index" 
+    [ngClass]="{whiteText: i >= 4 }" 
+    [ngStyle]="{backgroundColor: i >= 4 ? '#00f' : 'inherit'}"
   >{{counter}}</li>
 </ul>
