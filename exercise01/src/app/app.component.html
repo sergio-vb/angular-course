@@ -1,3 +1,6 @@
 <app-game-control (newGameComponent)="newGameComponentReceived($event)"></app-game-control>
 
-<p>{{counter}}</p>
+<div *ngFor="let counter of counterArray">
+    <app-even *ngIf="counter % 2 == 0" ></app-even>
+    <app-odd *ngIf="counter % 2 != 0" ></app-odd>
+</div>

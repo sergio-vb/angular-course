@@ -7,10 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  gameComponents = [];
+  counterArray = [];
 
-  newGameComponentReceived(){
-    console.log("Event Received.");
+  newGameComponentReceived(counter){
+    console.log("Event Received, counter:", counter.value);
+    this.counterArray.push(counter.value);
   }
 
 }
